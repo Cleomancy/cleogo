@@ -1,0 +1,58 @@
+title = "Website Name"
+baseURL = 'https://example.org'
+languageCode = 'en-us'
+
+[params]
+  # copyright href
+  cphref = "https://github.com/Cleomancy/cleogo/"
+
+  favicon = "/favicon.ico"
+
+[markup]
+  defaultMarkdownHandler = 'goldmark'
+
+    [markup.goldmark.parser.attribute]
+      block = false
+      title = true
+    [markup.goldmark.renderer]
+      hardWraps = false
+      unsafe = false
+      xhtml = false
+    [markup.goldmark.extensions.typographer]
+      apostrophe = '&#39;'
+      disable = false
+      ellipsis = '&#8230;'
+      emDash = '&#8212;'
+      enDash = '&#8211;'
+      leftAngleQuote = '&#8249;'
+      leftDoubleQuote = '&#8220;'
+      leftSingleQuote = '&#8216;'
+      rightAngleQuote = '&#8250;'
+      rightDoubleQuote = '&#8221;'
+      rightSingleQuote = '&#8217;'
+
+[outputFormats]
+  [outputFormats.xhtml]
+    baseName = 'index'
+    isHTML = true
+    mediaType = 'application/xhtml+xml'
+
+[mediaTypes]
+  [mediaTypes.'application/xhtml+xml']
+    suffixes = ['xhtml']
+
+[outputs]
+  home = ['html', 'rss']
+  page = ['html']
+  rss = ['rss']
+  section = ['html']
+  taxonomy = ['html']
+  term = ['html']
+
+[minify]
+  minifyOutput = false
+  [minify.tdewolff]
+    [minify.tdewolff.css]
+      keepCSS2 = false
+    [minify.tdewolff.html]
+      keepEndTags = false

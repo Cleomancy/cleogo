@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="{{ .Site.Language }}" lang="{{ .Site.Language }}">
+<head>
+	<meta name="generator" content="Hugo 0.121.2" />
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="canonical" href="{{ .Site.BaseURL }}" />
+	<link rel='alternate' type='application/rss+xml' title="{{ .Site.Title }} RSS" href='/index.xml' />
+	<link rel='stylesheet' type='text/css' href='/style.css' />
+	{{ with .Site.Params.favicon }}
+	<link rel="icon" type="image/x-icon" href="{{ . }}" />
+	{{ end -}}
+	<meta name="description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}" />
+	<title>{{ .Site.Title }}</title>
+</head>
+<body>
+{{ partial "header.xhtml" . }}
+<main>
+{{ block "main" . }}{{ .Content }}{{ end }}
+{{ range .Site.RegularPages | first 5 }}
+{{ partial "postlist.xhtml" . }}
+{{ end }}
+{{ partial "footer.xhtml" . }}
+</main>
+</body>
+</html>

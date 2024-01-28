@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language }}">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="canonical" href="{{ .Site.BaseURL }}">
+	<link rel='alternate' type='application/rss+xml' title="{{ .Site.Title }} RSS" href='/index.xml'>
+	<link rel='stylesheet' type='text/css' href='/style.css'>
+	{{ with .Site.Params.favicon }}
+	<link rel="icon" type="image/x-icon" href="{{ . }}">
+	{{ end -}}
+	<meta name="description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}">
+	<title>{{ .Title }}</title>
+</head>
+<body>
+{{ partial "header.html" . }}
+<main>
+{{ block "main" . }}
+<h4>Table of Content:</h4>
+{{ .TableOfContents }}
+{{ .Content }}
+{{ end }}
+{{ partial "nextprev.html" . -}}
+{{ partial "taglist.html" . }}
+{{ partial "footer.html" . }}
+</main>
+</body>
+</html>
