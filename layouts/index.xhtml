@@ -17,6 +17,7 @@
 {{ partial "header.xhtml" . }}
 <main>
 {{ block "main" . }}{{ .Content }}{{ end }}
+<h2>Recent Posts:</h2>
 {{ range .Site.RegularPages | first 5 }}
 {{ partial "postlist.xhtml" . }}
 {{ end }}
