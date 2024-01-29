@@ -26,4 +26,4 @@ In urSite/static/ you can edit the copied style.css to overwrite the theme's CSS
 
 ## Specs
 
-I documented my process [here](https://cleomancy.com/blog/hugo.html) if you want to read more.
+I documented my process [here](https://cleomancy.github.io/hugo/index.xhtml) if you want to read more.
