@@ -100,9 +100,12 @@ a:hover{
   width: 50%;
 }
 
+#sitemap h1{
+	text-decoration: underline dotted;
+}
+
 #sitemap ul{
   list-style:"\2014 \3E  ";
-
   padding-bottom: 1.50em;   
 }
 #sitemap li{
