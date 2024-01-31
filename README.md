@@ -1,6 +1,6 @@
 # Glorious Hugo Theme
 
-The Hugo theme I use for my blog, [CLEOMANCY(dot)BLOG](https://cleomancy.com/blog/).
+The Hugo theme I use for my blog, [CLEOMANCY(dot)BLOG](https://blog.cleomancy.com/).
 Focused on simplicity and accessibility.
 Based on [lugo](https://github.com/lukeSmithxyz/lugo).
 
