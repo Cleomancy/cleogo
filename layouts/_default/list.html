@@ -9,8 +9,21 @@
 {{ partial "postlist" . }}
 {{- end }}
 {{- end }}
+{{- if .RegularPages}}
 <div id="list">
 <h2>All posts:</h2>
+<ul>
+{{- range.Pages }}
+<li>
+	{{ .Date.Format "2 Jan 2006" }} - <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+</li>
+{{- end }}
+</ul></div>
+{{- end }}
+{{- if not .RegularPages}}
+<div id="list">
+<h2>All tags:</h2>
+<p>Browse per categories:</p>
 <ul>
 {{- range.Pages }}
 <li>
@@ -18,4 +31,5 @@
 </li>
 {{- end }}
 </ul></div>
+{{- end }}
 {{- end }}

@@ -13,14 +13,14 @@
 	<title>{{ .Site.Title }}</title>
 </head>
 <body>
-{{ partial "header.html" . }}
+{{ partial "header" . }}
 <main>
 {{ block "main" . }}{{ .Content }}{{ end }}
 <h2>Recent Posts:</h2>
 {{ range .Site.RegularPages | first 5 }}
-{{ partial "postlist.html" . }}
+{{ partial "postlist" . }}
 {{ end }}
-{{ partial "footer.html" . }}
+{{ partial "footer" . }}
 </main>
 </body>
 </html>
