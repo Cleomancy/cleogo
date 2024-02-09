@@ -1,6 +1,6 @@
 # Glorious Hugo Theme
 
-The Hugo theme I use for my blog, [CLEOMANCY(dot)BLOG](https://blog.cleomancy.com/).
+The Hugo theme I use for my blog, [BLOG dot CLEOMANCY](https://blog.cleomancy.com/).
 Focused on simplicity and accessibility.
 Based on [lugo](https://github.com/lukeSmithxyz/lugo).
 
@@ -26,4 +26,4 @@ In urSite/static/ you can edit the copied style.css to overwrite the theme's CSS
 
 ## Specs
 
-I documented my process [here](https://cleomancy.github.io/hugo/index.xhtml) if you want to read more.
+I documented my process [here](https://blog.cleomancy.com/hugo/) if you want to read more.
