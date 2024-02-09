@@ -11,7 +11,8 @@ hugo new site urSite
 cd urSite
 git clone https://github.com/Cleomancy/cleogo themes/cleogo
 echo "theme = 'cleogo'" >> hugo.toml
-cp themes/lugo/static/style.css static/
+cp themes/cleogo/static/style.css static/
+cp themes/cleogo/archetypes/default.md archetypes/default.md
 ```
 In urSite/static/ you can edit the copied style.css to overwrite the theme's CSS. You should also copy config.toml into hugo.toml to edit this theme's settings.
 
