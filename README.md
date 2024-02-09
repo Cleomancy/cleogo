@@ -17,12 +17,15 @@ In urSite/static/ you can edit the copied style.css to overwrite the theme's CSS
 
 ## Features
 
-- Makes one RSS feed for the entire site at `/index.xml`
+- Shows a Recent posts list with their summary and word counts.
+- Same for a specific tag page, show the latest three posts with summary, then a full list of every posts.
+- Makes one RSS feed for the entire site at `/index.xml`.
 - `nextprev.html` adds links to the Next and Previous articles to the bottom of a page.
 - `taglist.html` links all tags an article is tagged to for related content.
 - XHTML MIME type added.
 - Goldmark support for XHTML implemented.
 - If you prefer HTML, minify options are implemented as well.
+- Sitemap.xhtml not included refer to my [generator](https://github.com/Cleomancy/sm).
 
 ## Specs
 
