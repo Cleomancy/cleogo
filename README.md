@@ -39,7 +39,7 @@ and make sure its archetype at least contains the following lines:
 ```sitemap.md
 +++
 layout = 'sitemap'
-title = 'sitemap'
+title = 'Sitemap'
 type = 'else'
 +++
 ```
