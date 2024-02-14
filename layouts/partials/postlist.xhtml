@@ -1,3 +1,4 @@
+{{ if ne .Title "sitemap" }}
 <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
 <span style="float:right;">
 	<b>{{ .Date.Format "2 Jan 2006" }}</b>
@@ -7,4 +8,4 @@
 </span><br /><br />
 {{ .Summary }}<br />
 {{ if .Truncated }}
-<a href="{{ .RelPermalink }}">Read more...</a><span style="float:right;">{{ .WordCount }} words</span>{{ end }}
+<a href="{{ .RelPermalink }}">Read more...</a><span style="float:right;">{{ .WordCount }} words</span>{{ end }}{{ end }}

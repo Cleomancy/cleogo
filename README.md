@@ -26,7 +26,23 @@ In urSite/static/ you can edit the copied style.css to overwrite the theme's CSS
 - XHTML MIME type added.
 - Goldmark support for XHTML implemented.
 - If you prefer HTML, minify options are implemented as well.
-- Sitemap.xhtml not included refer to my [generator](https://github.com/Cleomancy/sm).
+- Sitemap.html generates a sitemap for users.
+
+## Sitemap.html
+
+The sitemap uses another layout, you must create a sitemap.md file in the 'content' folder:
+
+`hugo new sitemap.md`
+
+and make sure its archetype at least contains the following lines:
+
+```sitemap.md
++++
+layout = 'sitemap'
+title = 'sitemap'
+type = 'else'
++++
+```
 
 ## Specs
 
