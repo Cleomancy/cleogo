@@ -18,7 +18,7 @@ In urSite/static/ you can edit the copied style.css to overwrite the theme's CSS
 
 ## Features
 
-- Shows a Recent posts list with their summary and word counts.
+- Shows a 'Recent Posts' list with their summary and word count.
 - Same for a specific tag page, shows the latest three posts with summary, then a full list of every posts.
 - Makes one RSS feed for the entire site at `/index.xml`.
 - `nextprev.html` adds links to the Next and Previous articles to the bottom of a page.
@@ -26,14 +26,14 @@ In urSite/static/ you can edit the copied style.css to overwrite the theme's CSS
 - XHTML MIME type added.
 - Goldmark support for XHTML implemented.
 - If you prefer HTML, minify options are implemented as well.
-- Sitemap.html generates a sitemap for users.
+- `Sitemap.html` generates a sitemap for users.
 
 ## Sitemap.html
 
 The sitemap uses another layout, you must create a sitemap.md file in the 'content' folder:
-
-`hugo new sitemap.md`
-
+```sh
+hugo new sitemap.md
+```
 and make sure its archetype at least contains the following lines:
 
 ```sitemap.md
