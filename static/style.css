@@ -97,19 +97,3 @@ a:hover{
 #nextart,#prevart {
 	max-width: 33% ;
 }
-
-#sitemap{
-  text-align: justify;
-}
-
-#sitemap h1{
-	text-decoration: underline dotted;
-}
-
-#sitemap ul{
-  list-style:"\2014 \3E  ";
-  padding-bottom: 1.50em;   
-}
-#sitemap li{
-  font-size: 1.60em;
-}
