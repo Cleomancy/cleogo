@@ -11,7 +11,7 @@ copyright = 'Made with Cleogo'
 
   # toggle menu and or just parts of it.
   menu = true
-  tags = true
+  tag = true
   sitemap = false
   categories = true
 
