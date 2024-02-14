@@ -14,7 +14,8 @@
 </head>
 <body>
 {{ partial "header.html" . }}
-<main>
+<main id="sitemap">
+{{ .Content }}
 {{ range.Site.AllPages }}
 <li>
 	<a href="{{ .RelPermalink }}">{{ .Title }}</a>

@@ -1,13 +1,19 @@
 title = "Website Name"
 baseURL = 'https://example.org'
 languageCode = 'en-us'
-copyright = ''
+copyright = 'Made with Cleogo'
 
 [params]
   # copyright href
   cphref = "https://github.com/Cleomancy/cleogo/"
 
   favicon = "/favicon.ico"
+
+  # toggle menu and or just parts of it.
+  menu = true
+  tags = true
+  sitemap = false
+  categories = true
 
 [markup]
   defaultMarkdownHandler = 'goldmark'

@@ -1,2 +1,2 @@
-<header><h1>{{ if not .IsHome }}{{ .Title }}{{ else }}{{ .Site.Title }}{{ end }}</h1>
-<nav><a href="/">Home</a>|<a href="/tags/">All Tags</a>|<a href="/sitemap/">Sitemap</a></nav></header>
+<header><h1>{{ if not .IsHome }}{{ .Title }}{{ else }}{{ .Site.Title }}{{ end }}</h1>{{ if .Param "menu" }}
+<nav><a href="/">Home</a>{{ if .Param "tags" }}|<a href="/tags/">All Tags</a>{{ end }}{{ if .Param "categories" }}|<a href="/categories/">Categories</a>{{ end }}{{ if .Param "sitemap" }}|<a href="/sitemap/">Sitemap</a>{{ end }}</nav>{{ end }}</header>
