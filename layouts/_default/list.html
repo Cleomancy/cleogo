@@ -2,7 +2,6 @@
 {{ .Title | title }}
 {{- end }}
 {{ define "main" -}}
-{{ .Content }}
 {{- if .RegularPages}}
 <h2>Most recent:</h2>
 {{- range.Pages | first 3 }}

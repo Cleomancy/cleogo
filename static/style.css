@@ -97,3 +97,7 @@ a:hover{
 #nextart,#prevart {
 	max-width: 33% ;
 }
+
+#sitemap ul{
+	padding-left: 50px;
+}

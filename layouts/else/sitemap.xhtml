@@ -14,12 +14,17 @@
 <body>
 {{ partial "header.xhtml" . }}
 <main id="sitemap">
-{{ .Content }}
-{{ range.Site.AllPages }}
-<li>
-	<a href="{{ .RelPermalink }}">{{ .Title }}</a>
-</li>
-{{ end }}
+<h2>Pages:</h2>
+<ul>
+{{ range.Site.Pages }}
+{{ if not .Content }}
+<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>{{ end }}{{ end }}</ul>
+<h2>Blog Entries:</h2>
+<ul>
+{{ range.Site.RegularPages }}
+{{ if ne .Title "Sitemap" }}
+<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>{{ end }}{{ end }}</ul>
+{{ partial "footer.xhtml" . }}
 </main>
 </body>
 </html>
