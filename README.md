@@ -44,6 +44,8 @@ type = 'else'
 +++
 ```
 
+No need to add any content to sitemap.md after those lines, in fact you shouldn't and it will not be displayed anyway.
+
 ## Specs
 
 I documented my process [here](https://blog.cleomancy.com/hugo/) if you want to read more.
