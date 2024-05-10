@@ -4,9 +4,8 @@ languageCode = 'en-us'
 copyright = 'Made with Cleogo'
 
 [params]
-  # copyright href
-  cphref = "https://github.com/Cleomancy/cleogo/"
-
+  cphref = "https://github.com/Cleomancy/cleogo/" # copyright href
+  subtitle = "sample text"
   favicon = "/favicon.ico"
 
   # toggle menu and or just parts of it.
@@ -14,6 +13,8 @@ copyright = 'Made with Cleogo'
   tag = true
   sitemap = false
   categories = true
+
+  st = false # toggle subtitle under home page title.
 
 [markup]
   defaultMarkdownHandler = 'goldmark'

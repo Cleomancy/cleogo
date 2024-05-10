@@ -20,11 +20,25 @@ img {
 
 header{
 	text-align: center;
-	padding-bottom: 30px;
 }
 
 header h1 {
-	text-decoration: underline dotted;
+	font-size: 43px;
+	margin: 5px;
+	text-decoration : underline dotted;
+	text-decoration-thickness: 1px;
+}
+
+header q {
+	font-size: 16px;
+	word-spacing: 10px;
+	letter-spacing: 3px;
+	font-style: italic;
+}
+
+header nav{
+	padding-top: 10px;
+	padding-bottom: 30px;
 }
 
 h2 {
@@ -47,12 +61,8 @@ code{
 }
 
 #TableOfContents {
-	margin-top: 0;
+	margin-top: 12px;
 	padding-left: 27px;
-}
-
-h4{
-	margin: 0;
 }
 
 #TableOfContents ul{

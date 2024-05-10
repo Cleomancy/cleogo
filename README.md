@@ -27,6 +27,7 @@ In urSite/static/ you can edit the copied style.css to overwrite the theme's CSS
 - Goldmark support for XHTML implemented.
 - If you prefer HTML, minify options are implemented as well.
 - `Sitemap.html` generates a sitemap for users.
+- Toggleable Site subtitle + per page subtitles.
 
 ## Sitemap.html
 
@@ -44,7 +45,7 @@ type = 'else'
 +++
 ```
 
-No need to add any content to sitemap.md after those lines, in fact you shouldn't and it will not be displayed anyway.
+No need to add any content to sitemap.md after those lines, in fact you shouldn't, it will not be displayed anyway.
 
 ## Specs
 
