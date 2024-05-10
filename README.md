@@ -39,13 +39,16 @@ and make sure its archetype at least contains the following lines:
 
 ```sitemap.md
 +++
+slug = 'sm'
 layout = 'sitemap'
 title = 'Sitemap'
 type = 'else'
 +++
 ```
 
-No need to add any content to sitemap.md after those lines, in fact you shouldn't, it will not be displayed anyway.
+It must have a slug set to "sm" as it is the referer used in the header menu, otherwise our sitemap would be in /sitemap/ and would conflict with Hugo's sitemap generation.
+
+Do Not add any content to sitemap.md after those lines, it will not be displayed and it will break the sitemap itself. (not drastically but still)
 
 ## Specs
 
