@@ -1,1 +1,9 @@
-<header>{{ if not .IsHome }}<h1>{{ .Title }}</h1>{{ if .Params.subtitle }}<q>{{ .Params.subtitle }}</q>{{ end }}{{ else }}<h1>{{ .Site.Title }}</h1>{{ if .Param "st" }}<q>{{ .Site.Params.subtitle }}</q>{{ end }}{{ end }}{{ if .Param "menu" }}<nav><a href="/">Home</a>{{ if .Param "tag" }}|<a href="/tags/">All Tags</a>{{ end }}{{ if .Param "categories" }}|<a href="/categories/">Categories</a>{{ end }}{{ if .Param "sitemap" }}|<a href="/sm/">Sitemap</a>{{ end }}</nav>{{ end }}</header>
+<div class="head">
+    <p>{{with .Site.Params.logo}}<img src="{{.}}" alt="logo" id="logo" />{{end}}{{ .Site.Title }} | 
+    {{ range $i, $e := .Site.Menus.main }} {{- if $i}} |&nbsp;{{- end -}}<a href="{{ .URL }}">{{ .Name }}</a>{{ end }} |
+    {{ if .IsTranslated }}{{ range .Translations }}
+    <a href="{{ .RelPermalink }}">{{ .Language.Lang }}</a>{{ end }} | {{ end }}
+    {{if .Content}}{{if not .RegularPages}}  <label for="check" class="burger">&#9776;</label>{{end}}{{end}}</p>
+{{ partial "burger.xhtml" . }}
+{{ partial "nextprev.xhtml" . }}
+</div>

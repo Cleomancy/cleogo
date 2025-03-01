@@ -1,0 +1,18 @@
+<div class="toc">
+<p style="float: right; margin-right:30px;"><a href="#top">↥</a></p>
+<h3>{{i18n "toc"}}</h3>
+{{- range .Fragments.Headings }}
+  <ul style="  list-style-type: none; padding: 0; margin: 0;">
+    {{- range .Headings }}
+    <li><a href="#{{ anchorize .ID }}">{{ .Title }}</a></li>
+    {{- if .Headings }}
+    <li><ul>
+      {{- range .Headings }}
+      <li><a href="#{{ anchorize .ID }}">{{ .Title }}</a></li>
+      {{- end }}
+    </ul></li>
+    {{- end }}
+    {{- end }}
+  </ul>
+  {{- end }}
+</div>

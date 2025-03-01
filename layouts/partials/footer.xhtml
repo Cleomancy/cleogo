@@ -1,3 +1,7 @@
-<footer>
-	<hr /><a href="/">Home</a><br /><a href="/index.xml"><img src="/rss.svg" alt="RSS Feed" title="Subscribe via RSS for updates." /></a><img src ="/html5.svg" alt="[valid html5]" /><img src ="/css.svg" alt="[valid CSS]" /><br /><p>&#169; {{ now.Year }} <a href="{{ .Site.Params.cphref }}"><b>{{ if .Site.Copyright }}{{ .Site.Copyright }}{{ else }}{{ .Site.Title }}{{ end }}</b></a></p>
-</footer>
+<div class="footer">
+    {{partial "taglist.xhtml" .}}
+    {{partial "nextprev.xhtml" .}}
+    <p>{{ range $i, $e := .Site.Menus.footer }} {{- if $i}}|&nbsp;{{- end -}} <a href="{{ .URL }}">{{ .Name }}</a> {{ end }} | {{ if .IsTranslated }}{{ range .Translations }}<a href="{{ .RelPermalink }}">{{ .Language.Lang }}</a>{{ end }}{{ end }}</p>
+    <p><a href="{{ "/index.xml" | relLangURL }}"><img src="/rss.svg" alt="RSS Feed" /></a>  <img src ="/xhtml.svg" alt="[valid html5]" />  <img src ="/css.svg" alt="[valid CSS]" /></p>
+    <p>&#169; {{ now.Year }} {{ if .Site.Params.cphref }}<a href="{{ .Site.Params.cphref }}">{{ end }}{{ if .Site.Params.Copyright }}{{ .Site.Params.Copyright }}{{ else }}{{ .Site.Title }}{{ end }}</a></p>
+</div>

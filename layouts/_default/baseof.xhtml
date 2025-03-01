@@ -1,29 +1,24 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="{{ .Site.Language }}" lang="{{ .Site.Language }}">
-<head>
-	<meta name="generator" content="Hugo 0.121.2" />
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="canonical" href="{{ .Site.BaseURL }}" />
-	<link rel='alternate' type='application/rss+xml' title="{{ .Site.Title }} RSS" href='/index.xml' />
-	<link rel='stylesheet' type='text/css' href='/style.css' />
-	{{ with .Site.Params.favicon }}
-	<link rel="icon" type="image/x-icon" href="{{ . }}" />
-	{{ end -}}
-	<meta name="description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}" />
+    <head>
+        <meta http-equiv="Content-Type" content="application/xhtml+xml;charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="canonical" href="{{ .Site.BaseURL }}" />
+		<link rel='alternate' type='application/rss+xml' title="{{ .Site.Title }} RSS" href='/index.xml' />
+		<link rel='stylesheet' type='text/css' href='/style.css' />
+		<link rel="icon" href="{{ with .Site.Params.favicon }}{{ . }}{{ end }}" />
+		<meta name="description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}" />
 	<title>{{ .Title }}</title>
 </head>
 <body>
-{{ partial "header.xhtml" . }}
-<main>
-{{ block "main" . }}
-<h4>Table of Content:</h4>
-{{ .TableOfContents }}
-{{ .Content }}
-{{ end }}
-{{ partial "nextprev.xhtml" . -}}
-{{ partial "taglist.xhtml" . }}
-{{ partial "footer.xhtml" . }}
-</main>
+	{{ partial "header.xhtml" . }}
+	{{ if .Content }}{{ partial "toc.xhtml" . }}{{end}}
+	{{ block "main" . }}<div id="top" class="main"><table class="list"><tr>
+		<th rowspan="2" class="tdate"><b>{{ .Date | time.Format ":date_medium" }}</b></th>
+		<th style="background:none;">　</th></tr>
+		<tr><th>{{ .Title }}</th></tr>
+		<tr><td colspan="2">{{ .Content }} {{ end }}
+	{{ if .Content }}<h5 style="text-align: right; margin-top: 100px;">{{ .WordCount }} {{i18n "words"}} | {{i18n "lastmod"}} {{ .Page.Lastmod | time.Format ":date_medium" }}</h5></td></tr></table></div>{{end}}	
+	{{ partial "footer.xhtml" .}}
 </body>
 </html>

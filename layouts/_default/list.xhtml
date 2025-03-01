@@ -3,32 +3,34 @@
 {{- end }}
 {{ define "main" -}}
 {{- if .RegularPages}}
-<h2>Most recent:</h2>
-{{- range.Pages | first 3 }}
+<div id="page">
+<div class="lay">
+<h2>{{i18n "lol"}}</h2>
+{{- range.Pages | first 2 }}
 {{ partial "postlist.xhtml" . }}
 {{- end }}
 {{- end }}
 {{- if .RegularPages}}
-<div id="list">
-<h2>All posts:</h2>
+<h2>{{i18n "all"}}</h2>
 <ul>
 {{- range.Pages }}
 <li>
-	{{ .Date.Format "2 Jan 2006" }} - <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+	{{ .Date | time.Format ":date_long" }} - <a href="{{ .RelPermalink }}">{{ .Title }}</a>
 </li>
 {{- end }}
-</ul></div>
+</ul></div></div>
 {{- end }}
 {{- if not .RegularPages}}
-<div id="list">
-<h2>All tags:</h2>
-<p>Browse per categories:</p>
+<div id="page">
+<div class="inter">
+<h2>{{i18n "tags"}}:</h2>
 <ul>
 {{- range.Pages }}
 <li>
 	<a href="{{ .RelPermalink }}">{{ .Title }}</a>
 </li>
 {{- end }}
-</ul></div>
+</ul>
+</div></div>
 {{- end }}
 {{- end }}

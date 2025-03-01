@@ -1,0 +1,35 @@
+[lol]
+other = "Les plus Récents:"
+
+[all]
+other = "Tous les Posts:"
+
+[smp]
+other = "Pages:"
+
+[smb]
+other = "Posts du Blog:"
+
+[words]
+other = "mots"
+
+[lastmod]
+other = "modifié le:"
+
+[tags]
+other = "Thèmes"
+
+[fn]
+other = "Notes"
+
+[toc]
+other = "Table des Matières:"
+
+[readlen]
+other = "min de lecture"
+
+[upon]
+other = "Mis à jour le:"
+
+[related]
+other = "Concerne:"

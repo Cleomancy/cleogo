@@ -2,7 +2,7 @@
 title = "{{ replace .Name "-" " " | title }}"
 subtitle = ""
 date = {{ .Date }}
-draft = true
+lastmod = ""
 description = ""
 tags = [""]
 categories = ""

@@ -1,0 +1,1 @@
+{{ $links := .Page.Store.Get "footlink"}}<div class="b"><p>{{i18n "fn"}}:</p>{{ range  $keys, $url := $links }}<p id="q{{ $keys}}"><a href="#p{{$keys}}">{{ $keys}}</a>: {{ if strings.Contains $url "http" }}<a href="{{$url}}">{{$url}}</a>{{else}}{{$url}}{{end}}</p>{{end}}</div>{{ .Page.Scratch.Delete "footlink" }}

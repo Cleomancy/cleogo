@@ -1,0 +1,35 @@
+[lol]
+other = "Most Recent:"
+
+[all]
+other = "All Posts:"
+
+[smp]
+other = "Pages:"
+
+[smb]
+other = "Blog Entries:"
+
+[words]
+other = "words"
+
+[lastmod]
+other = "Last modified on:"
+
+[tags]
+other = "Topics"
+
+[fn]
+other = "Footnotes"
+
+[toc]
+other = "Table of Contents:"
+
+[readlen]
+other = "minute read"
+
+[upon]
+other = "Updated on:"
+
+[related]
+other = "Related tags:"

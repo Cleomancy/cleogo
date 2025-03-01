@@ -1,10 +1,10 @@
+{{ if ne .Title "Sitemap" }}
 {{ if or .Next .Prev -}}
-<div id="nextprev">
-{{- with .Prev }}
-<div id="prevart"><a href="{{ .RelPermalink}}">Previous:<br />{{.Title}}</a></div>
+<table class="nextprev" width="100%" cellpadding="0" cellspacing="0"><tr>
+{{- with .Prev }}<td valign="bottom"><a href="{{ .RelPermalink | relLangURL}}"><- {{.Title}}</a></td>
+<td style="width: 60%;" valign="bottom"></td>{{ end -}}
+{{- with not .Prev }}<td style="width: 60%;" valign="bottom"></td>{{ end -}}
+{{- with .Next -}}<td valign="bottom"><a href="{{ .RelPermalink | relLangURL}}">{{.Title}} -></a></td>{{ end -}}
+</tr></table>
 {{ end -}}
-{{- with .Next -}}
-<div id="nextart"><a href="{{ .RelPermalink}}">Next:<br />{{.Title}}</a></div>
-{{ end -}}
-</div>
-{{ end -}}
+{{end}}

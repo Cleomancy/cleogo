@@ -1,11 +1,11 @@
 {{ if ne .Title "Sitemap" }}
-<h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-<span style="float:right;">
-	<b>{{ .Date.Format "2 Jan 2006" }}</b>
-	{{ if .Params.tags }}
-	{{ range .Params.tags }} | <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> |
-	{{ end }}{{ end }}
-</span><br /><br />
-{{ .Summary }}<br />
-{{ if .Truncated }}
-<a href="{{ .RelPermalink }}">Read more...</a><span style="float:right;">{{ .WordCount }} words</span>{{ end }}{{ end }}
+<table class="list"><tr>
+    <th rowspan="2" class="tdate">{{ .Date | time.Format ":date_medium" }}</th>
+    <th style="background:none;">　</th></tr>
+    <tr><th>{{ .Title }}</th></tr>
+    <tr><td colspan="2">
+    <p class="postinfo">{{ .ReadingTime }} {{i18n "readlen"}} | {{ if .Params.tags }}Tags: {{ range .Params.tags }} <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}.xhtml">{{ . }}</a>{{ end }} | {{ if .Params.lastmod }}{{i18n "upon"}} {{ .Lastmod | time.Format ":date_short" }}{{ end }}{{ end }}</p>
+    {{.Summary}}{{ if .Truncated }}
+    <p><a href="{{ .RelPermalink }}">[Read More]</a></p>{{end}}</td></tr>
+</table>
+{{ end }}

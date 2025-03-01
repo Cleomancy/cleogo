@@ -1,20 +1,19 @@
 title = "Website Name"
 baseURL = 'https://example.org'
-languageCode = 'en-us'
-copyright = 'Made with Cleogo'
+disableHugoGeneratorInject = true
+uglyURLs = true
+theme = 'cleogo'
 
 [params]
+  copyright = 'Made with Cleogo'
   cphref = "https://github.com/Cleomancy/cleogo/" # copyright href
-  subtitle = "sample text"
   favicon = "/favicon.ico"
+  logo = "/logo.png"
+  description = 'lol'
+  smdesc = 'sitemap'
 
-  # toggle menu and or just parts of it.
-  menu = true
-  tag = true
-  sitemap = false
-  categories = true
-
-  st = false # toggle subtitle under home page title.
+[frontmatter]
+  lastmod = ['lastmod', ':fileModTime', ':default']
 
 [markup]
   defaultMarkdownHandler = 'goldmark'
@@ -25,7 +24,7 @@ copyright = 'Made with Cleogo'
     [markup.goldmark.renderer]
       hardWraps = false
       unsafe = false
-      xhtml = false
+      xhtml = true
     [markup.goldmark.extensions.typographer]
       apostrophe = '&#39;'
       disable = false
@@ -38,6 +37,20 @@ copyright = 'Made with Cleogo'
       rightAngleQuote = '&#8250;'
       rightDoubleQuote = '&#8221;'
       rightSingleQuote = '&#8217;'
+    [markup.highlight]
+      anchorLineNos = false
+      codeFences = false
+      guessSyntax = false
+      hl_Lines = ''
+      hl_inline = false
+      lineAnchors = ''
+      lineNoStart = 1
+      lineNos = true
+      lineNumbersInTable = true
+      noClasses = true
+      noHl = true
+      style = 'monokai'
+      tabWidth = 4
 
 [outputFormats]
   [outputFormats.xhtml]
@@ -50,17 +63,64 @@ copyright = 'Made with Cleogo'
     suffixes = ['xhtml']
 
 [outputs]
-  home = ['html', 'rss']
-  page = ['html']
+  home = ['xhtml', 'rss']
+  page = ['xhtml']
   rss = ['rss']
-  section = ['html']
-  taxonomy = ['html']
-  term = ['html']
+  section = ['xhtml']
+  taxonomy = ['xhtml']
+  term = ['xhtml']
 
-[minify]
-  minifyOutput = false
-  [minify.tdewolff]
-    [minify.tdewolff.css]
-      keepCSS2 = false
-    [minify.tdewolff.html]
-      keepEndTags = false
+[menu]
+[[menu.main]]
+  name = 'Home'
+  url = '/index.xhtml'
+  weight = 10
+[[menu.main]]
+  name = 'Tags'
+  url = '/tags.xhtml'
+  weight = 20
+[[menu.footer]]
+  name = 'Home'
+  url = '/index.xhtml'
+  weight = 10
+[[menu.footer]]
+  name = 'Sitemap'
+  url = '/sm.xhtml'
+  weight = 20
+
+[languages]
+  [languages.en]
+    languageName = 'English'
+    #title = 'In English'
+    contentDir = "content/english"
+    weight = 1
+  [languages.fr]
+    languageName = 'Français'
+    #title = 'En Français'
+    contentDir = "content/french"
+    weight = 2
+  [languages.fr.params]
+    description = 'lolfr'
+    favicon = "/favicon.ico"
+    logo = "/logo.png"
+    smdesc = 'sitemapfr'
+    copyright = 'Propulsé par cleogo'
+    cphref = "https://github.com/Cleomancy/cleogo/" # copyright href
+  [languages.fr.menu]
+      [[languages.fr.menu.main]]
+        name = 'Accueil'
+        pageRef = '/'
+        weight = 10
+      [[languages.fr.menu.main]]
+        name = 'Tags'
+        pageRef = 'tags.xhtml'
+        weight = 20
+      [[languages.fr.menu.footer]]
+        name = 'Accueil'
+        pageRef = '/'
+        weight = 10
+      [[languages.fr.menu.footer]]
+        name = 'Sitemap'
+        url = '/fr/sm.xhtml'
+        weight = 20
+      
